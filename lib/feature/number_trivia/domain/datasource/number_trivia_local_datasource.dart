@@ -1,4 +1,4 @@
-import '../model/number_trivia_model.dart';
+import '../../data/model/number_trivia_model.dart';
 
 abstract class NumberTriviaLocalDataSource {
   Future<NumberTriviaModel> getLastNumberTrivia();
