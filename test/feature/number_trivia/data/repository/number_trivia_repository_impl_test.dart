@@ -9,7 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:clean_architecture_tutorial/feature/number_trivia/domain/datasource/number_trivia_local_datasource.dart';
 import 'package:clean_architecture_tutorial/feature/number_trivia/domain/datasource/number_trivia_remote_datasource.dart';
-import 'package:clean_architecture_tutorial/library/platform/network_info.dart';
+import 'package:clean_architecture_tutorial/library/network/network_info.dart';
 import 'number_trivia_repository_impl_test.mocks.dart';
 
 @GenerateMocks([NumberTriviaRemoteDatasource])

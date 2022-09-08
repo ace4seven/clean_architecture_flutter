@@ -2,7 +2,7 @@ import 'package:clean_architecture_tutorial/feature/number_trivia/data/model/num
 import 'package:clean_architecture_tutorial/feature/number_trivia/domain/entity/number_trivia.dart';
 import 'package:clean_architecture_tutorial/feature/number_trivia/domain/repository/number_trivia_repository.dart';
 import 'package:clean_architecture_tutorial/library/error/exception.dart';
-import 'package:clean_architecture_tutorial/library/platform/network_info.dart';
+import 'package:clean_architecture_tutorial/library/network//network_info.dart';
 import 'package:dartz/dartz.dart';
 import '../../../../library/error/failure.dart';
 import '../../domain/datasource/number_trivia_local_datasource.dart';

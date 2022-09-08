@@ -11,7 +11,7 @@ import 'package:clean_architecture_tutorial/feature/number_trivia/domain/datasou
     as _i5;
 import 'package:clean_architecture_tutorial/feature/number_trivia/domain/datasource/number_trivia_remote_datasource.dart'
     as _i3;
-import 'package:clean_architecture_tutorial/library/platform/network_info.dart'
+import 'package:clean_architecture_tutorial/library/network/network_info.dart'
     as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
