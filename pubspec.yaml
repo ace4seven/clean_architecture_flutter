@@ -15,10 +15,10 @@ dependencies:
   flutter_bloc: ^8.0.1
   equatable: ^2.0.3
   dartz: ^0.10.1
-  data_connection_checker: ^0.3.4
   http: ^0.13.5
   shared_preferences: ^2.0.15
   bloc_test: ^9.1.0
+  internet_connection_checker: ^0.0.1+4
 
 dev_dependencies:
   flutter_test:

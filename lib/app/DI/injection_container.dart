@@ -8,8 +8,8 @@ import 'package:clean_architecture_tutorial/feature/number_trivia/domain/usecase
 import 'package:clean_architecture_tutorial/feature/number_trivia/presentation/bloc/number_trivia_bloc.dart';
 import 'package:clean_architecture_tutorial/library/network/network_info.dart';
 import 'package:clean_architecture_tutorial/library/util/input_converter.dart';
-import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:get_it/get_it.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
@@ -43,12 +43,12 @@ Future<void> init() async {
       () => NumberTriviaLocalDataSourceImpl(sl()));
 
   // Core
-  sl.registerLazySingleton<InputConverter>(() => InputConverter());
-  sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(dataConnectionChecker: sl()));
+  sl.registerLazySingleton(() => InputConverter());
 
   // External
   final sharedPreferences = await SharedPreferences.getInstance();
-  sl.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
-  sl.registerLazySingleton<http.Client>(() => http.Client());
-  sl.registerLazySingleton<DataConnectionChecker>(() => DataConnectionChecker.new());
+  sl.registerLazySingleton(() => sharedPreferences);
+  sl.registerLazySingleton(() => http.Client());
+  sl.registerLazySingleton(() => InternetConnectionChecker());
+  sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(dataConnectionChecker: sl()));
 }
